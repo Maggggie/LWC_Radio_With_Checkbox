@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Contacts">
+        <div class="slds-m-around_medium">
+            <template for:each={contacts.data} for:item="contact">
+                <lightning-input 
+                key={contact.Id} 
+                label={contact.Name} 
+                type="checkbox" 
+                data-value={contact.Id} 
+                onchange={handleChangeEvent}>
+            </lightning-input>
+            </template>
+        </div>
+    </lightning-card>
+</template>
